@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Booking</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.3.0/css/all.min.css"
+        integrity="sha512-SzlrxWUlpfuzQ+pcUCosxcglQRNAq/DZjVsC0lE40xsADsfeQoEypE+enwcOiGjk/bSuGGKHEyjSoQ1zVisanQ=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<body>
+    <section class="header">
+        <a href="home.html" class="logo">Travel</a>
+        <nav class="navbar">
+            <a href="home.html">Home</a>
+            <a href="about.html">About</a>
+            <a href="package.html">Package</a>
+            <a href="book.html">Book</a>
+        </nav>
+        <div id="menu-btn" class="fas fa-bars"></div>
+    </section>
+
+    <div class="heading" style="background:url(photos/book.jpg)">
+        <h1>Book Now</h1>
+    </div>
+    <!-- we put the name value in connection part -->
+    <section class="booking">
+        <h1 class="heading-title">Book Your Trip</h1>
+        <form action="book.html" method="post" class="book-form">
+            <div class="flex">
+                <div class="input-box">
+                    <label for="name">Name :</label>
+                    <input type="text" placeholder="Enter your name" id="name" name="name" required>
+                </div>
+                <div class="input-box">
+                    <label for="email">Email id :</label>
+                    <input type="email" placeholder="Enter your email id" id="email" name="email" required>
+                </div>
+                <div class="input-box">
+                    <label for="phone">Phone number :</label>
+                    <input type="tel" placeholder="Enter your phone number" minlength="10" id="phone" name="phone"
+                        required>
+                </div>
+                <div class="input-box">
+                    <label for="address">Address :</label>
+                    <input type="text" placeholder="Enter your address" id="address" name="address" required>
+                </div>
+                <div class="input-box">
+                    <label for="location">Where to :</label>
+                    <input type="text" placeholder="Enter your destination" id="location" name="location" required>
+                </div>
+                <div class="input-box">
+                    <label for="guests">How many guests :</label>
+                    <input type="number" placeholder="Number of Guests" min="1" id="guests" name="guests" required>
+                </div>
+                <div class="input-box">
+                    <label for="arrivals">Arrival :</label>
+                    <input type="date" id="arrivals" name="arrivals" min="" required>
+                </div>
+                <div class="input-box">
+                    <label for="leaving">Leaving :</label>
+                    <input type="date" id="leaving" name="leaving" min="" required>
+                </div>
+            </div>
+            <input type="submit" value="submit" class="btn" name="send">
+        </form>
+    </section>
+
+
+    <section class="footer">
+        <div class="box-container">
+            <div class="box">
+                <h3>Quick Links</h3>
+                <a href="home.html"> <i class="fas fa-angle-right"></i> Home</a>
+                <a href="about.html"> <i class="fas fa-angle-right"></i> About</a>
+                <a href="package.html"> <i class="fas fa-angle-right"></i> Package</a>
+                <a href="book.html"> <i class="fas fa-angle-right"></i> Book</a>
+            </div>
+
+            <div class="box">
+                <h3>Extra Links</h3>
+                <a href="#"> <i class="fas fa-angle-right"></i> Ask Questions</a>
+                <a href="#"> <i class="fas fa-angle-right"></i> About Us</a>
+                <a href="#"> <i class="fas fa-angle-right"></i> Privacy Policy</a>
+                <a href="#"> <i class="fas fa-angle-right"></i> Terms of use</a>
+
+
+            </div>
+            <div class="box">
+                <h3>Contact Info</h3>
+                <a href="#"> <i class="fas fa-phone"></i> +91912219191</a>
+                <a href="#"> <i class="fas fa-phone"></i> +91929309299</a>
+                <a href="#"> <i class="fas fa-envelope"></i> divyanshu02@gmail.com</a>
+                <a href="#"> <i class="fas fa-map"></i> Dibrugarh-786001, India.</a>
+            </div>
+            <div class="box">
+                <h3>Follow US</h3>
+                <a href="#"> <i class="fab fa-facebook-f"></i>Facebook</a>
+                <a href="#"> <i class="fab fa-twitter"></i>Twitter</a>
+                <a href="#"> <i class="fab fa-instagram"></i>instagram</a>
+                <a href="#"> <i class="fab fa-linkedin"></i>linkedin</a>
+            </div>
+        </div>
+        <div class="credit">Created By <span>Divyanshu Agarwal</span></div>
+    </section>
+    <script>
+        const today = new Date().toISOString().split('T')[0];
+        document.getElementById("arrivals").setAttribute("min", today);
+        document.getElementById("leaving").setAttribute("min", today);
+    </script>
+    <script src="https://cdn.jsdelivr.net/npm/swiper@9/swiper-bundle.min.js"></script>
+
+    <script src="app.js"></script>
+</body>
+
+</html>
